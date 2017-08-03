@@ -1,0 +1,34 @@
+{
+  "name": "amedu.github.io",
+  "version": "1.0.0",
+  "description": "A site for Black Education",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albertmpro/amedu.github.io.git"
+  },
+  "keywords": [
+    "education",
+    "learn",
+    "smart",
+    "think",
+    "do"
+  ],
+  "author": "Albert M. Byrd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albertmpro/amedu.github.io/issues"
+  },
+  "homepage": "https://github.com/albertmpro/amedu.github.io#readme",
+  "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.2"
+  }
+}
