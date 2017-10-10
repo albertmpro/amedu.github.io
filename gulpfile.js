@@ -14,12 +14,20 @@ gulp.task('greet', function()
     console.log("Learn something!");
 });
 
+gulp.task('image',function()
+{
+    return gulp.src('dev/images/*')
+    .pipe(plumber())
+    .pipe(imgcompact())
+    .pipe(gulp.dest('images/'));
+});
+
 
 
 //Generate the style 
 gulp.task("style",function()
 {
-    gulp.src('dev/style/style.scss')
+    return gulp.src('dev/style/style.scss')
     .pipe(plumber())
     .pipe(sass())
     .pipe(gulp.dest('./'))
@@ -31,10 +39,11 @@ gulp.task("style",function()
 // Convert the albert js files into 1 
 gulp.task("albertjs",function()
 {
+    //Combine everything into one file
     return gulp.src('dev/albertjs/*.js')
     .pipe(plumber())
-    .pipe(uglyjs())
-    .pipe(concat('albert.js'))
+    .pipe(uglyjs()) // shrink your file size
+    .pipe(concat('albert.js')) //combine
     .pipe(gulp.dest('./js'));
  
 });
@@ -53,14 +62,17 @@ gulp.task("watch",function()
 {
     //Handle the Sass Task
     gulp.watch('dev/style/style.scss',['style']);
-    //Handle the albert.js code 
+    //Handle the main  albert.js code 
     gulp.watch('dev/albertjs/*.js',['albertjs']);
-    // Convert Pug to Html 
+    // Convert Pug to a Html Site 
     gulp.watch('dev/site/*.pug',['site']);
+
+    //Do images optmizing  on the fly 
+    gulp.watch('dev/images/*',['image']);
 });
 
-//Watch task
+
 
 
 //Default task that runs 
-gulp.task('default',['greet','albertjs','style','site','watch']);
+gulp.task('default',['greet','image','albertjs','style','site','watch']);

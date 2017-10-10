@@ -1,0 +1,125 @@
+article, aside, details, figcaption, figure, footer, header,
+hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+body {
+  margin: 0px;
+  top: 0px;
+  padding: 0px;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-seirf;
+  font-size: 1.5rem;
+  line-height: 1.5rem; }
+
+#mnu {
+  display: none; }
+
+img {
+  border: 0px;
+  width: 85%;
+  height: auto;
+  display: inline-block;
+  padding: 0px; }
+
+.cover {
+  position: absolute;
+  top: 0px;
+  width: 100%; }
+
+.clear {
+  clear: both; }
+
+.left {
+  text-align: left; }
+
+.center {
+  text-align: center; }
+
+.right {
+  text-align: right; }
+
+.justify {
+  text-align: justify; }
+
+.cblock {
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
+
+.pright {
+  float: right;
+  display: block; }
+
+.pleft {
+  flaot: left;
+  display: block; }
+
+#mnu {
+  display: none; }
+  #mnu div {
+    display: none; }
+
+@media screen and (max-width: 768px) {
+  #mnu {
+    float: right;
+    width: 45px;
+    height: 45px;
+    display: block;
+    cursor: pointer; }
+    #mnu div {
+      width: 20px;
+      height: 4.8px;
+      background: #fff;
+      margin: 3px 0px;
+      display: block; }
+  .container {
+    width: 85%;
+    margin-left: 15px;
+    margin-right: 15px; } }
+
+body {
+  background: #000;
+  color: #fff; }
+
+.container {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
+
+.card {
+  width: 300px;
+  height: 150px;
+  margin: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  .card:active .front {
+    transform: perspective(600px) rotateY(-180deg); }
+  .card:active .back {
+    transform: perspective(600px) rotateY(0deg); }
+  .card .front {
+    position: absolute;
+    transform: perspective(600px) rotateY(0deg);
+    width: 300px;
+    height: 150px;
+    border-radius: 7px;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+    -ms-transition: transform .5s linear 0s;
+    -webkit-transition: transform .5s linear 0s;
+    -moz-transition: transform .5s linear 0s; }
+  .card .back {
+    position: absolute;
+    transform: perspective(600px) rotateY(180deg);
+    width: 300px;
+    height: 150px;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+    -ms-transition: transform .5s linear 0s;
+    -webkit-transition: transform .5s linear 0s;
+    -moz-transition: transform .5s linear 0s; }
